@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_tela_produto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+    tools:context="com.reciclagem.reciclagem.TelaProduto">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"></android.support.v4.view.ViewPager>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/fotoProduto"
+                android:layout_width="200sp"
+                android:layout_height="220sp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/pet" />
+
+            <TextView
+                android:id="@+id/textoNomeProduto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/fotoProduto"
+                android:layout_marginTop="45dp"
+                android:text="Nome do produto: "
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/nomeProduto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/fotoProduto"
+                android:layout_marginTop="45dp"
+                android:layout_toRightOf="@+id/textoNomeProduto"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/textoValorProduto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textoNomeProduto"
+                android:layout_marginTop="20dp"
+                android:text="Valor do produto: "
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/valorProduto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textoNomeProduto"
+                android:layout_marginTop="20dp"
+                android:layout_toRightOf="@+id/textoValorProduto"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/textoData"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/valorProduto"
+                android:layout_marginTop="40dp"
+                android:text="Data: "
+                android:textSize="18dp" />
+
+            <Spinner
+                android:id="@+id/spinnerDia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textoData"
+                android:layout_marginTop="10sp"></Spinner>
+
+
+            <Spinner
+                android:id="@+id/spinnerMes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textoData"
+                android:layout_marginLeft="20sp"
+                android:layout_marginTop="10sp"
+                android:layout_toRightOf="@+id/spinnerDia"></Spinner>
+
+
+            <Spinner
+                android:id="@+id/spinnerAno"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textoData"
+                android:layout_marginTop="10sp"
+                android:layout_toRightOf="@+id/spinnerMes"></Spinner>
+
+            <TextView
+                android:id="@+id/textoHorario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/spinnerAno"
+                android:layout_marginTop="25dp"
+                android:text="Horário: "
+                android:textSize="18dp" />
+
+            <Spinner
+                android:id="@+id/spinnerHorario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textoHorario"
+                android:layout_marginTop="10sp"></Spinner>
+
+            <Button
+                android:id="@+id/botaoReservar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/spinnerHorario"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="60sp"
+                android:text="Faça algo"
+                android:textSize="20sp" />
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>
